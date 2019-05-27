@@ -41,7 +41,7 @@
                         text-xs-center
                         white--text
                         xs12>
-                    &copy;2018 — <strong>Ankoks</strong>
+                    &copy;2019 — <strong>Ankoks</strong>
                 </v-flex>
             </v-layout>
         </v-footer>
