@@ -16,22 +16,55 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <div id="app">
+        <TodoList :todos="todos" @delete-todo="deleteTodo"/>
+        <v-btn v-on:click="refreshTodo">Refresh todo list</v-btn>
+
+        <h1>Current value = {{ counter }}</h1>
+        <v-btn v-on:click="increaseOne">Increase</v-btn>
+        <v-btn v-on:click="decreaseOne">Decrease</v-btn>
+
+        <h1>
+          <h1 v-on:mouseover="setRandomColor">Text for change color on HOVER</h1>
+        </h1>
+      </div>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+  // import HelloWorld from './components/HelloWorld'
+  import TodoList from './components/TodoList'
 
-export default {
+  export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
-  data () {
+  data() {
     return {
-      //
+      todos: ['1. First', '2. Second'],
+      counter: 1
+    }
+  },
+  components: {
+    TodoList
+  },
+  methods: {
+    deleteTodo(index) {
+      this.todos.splice(index, 1)
+    },
+    refreshTodo() {
+      this.todos = ['1. First', '2. Second']
+    },
+    increaseOne() {
+      this.counter++
+    },
+    decreaseOne() {
+      this.counter--
+    },
+    setRandomColor(event) {
+      event.target.style.color = 'rgb('
+              + (Math.floor(Math.random() * 256)) + ','
+              + (Math.floor(Math.random() * 256)) + ','
+              + (Math.floor(Math.random() * 256)) + ')'
     }
   }
 }
