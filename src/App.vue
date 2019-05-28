@@ -20,7 +20,7 @@
 
         <h1>Current value = {{ counter }}</h1>
         <v-btn v-on:click="increaseOne">Increase</v-btn>
-        <v-btn v-on:click="decreaseOne">Decrease</v-btn>
+        <v-btn @click="decreaseOne">Decrease</v-btn>
 
         <h1>
           <h1 v-on:mouseover="setRandomColor">Text for change color on HOVER</h1>
