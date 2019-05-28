@@ -28,16 +28,23 @@
 
         <v-flex xs12 sm6 md3>
           <v-text-field v-model="inputValue"
-                  label="Enter some text"></v-text-field>
+                        label="Enter some text"></v-text-field>
         </v-flex>
         <h1>{{ inputValue }}</h1>
 
         <v-flex xs12 sm6 d-flex>
           <v-select :items="itemsForSelect"
                     v-model="selectValue"
-                  label="Items to select"></v-select>
+                    label="Items to select"></v-select>
         </v-flex>
         <h1>{{ selectValue }}</h1>
+
+        <v-btn @click="showLoader = !showLoader">
+          <v-icon>fingerprint</v-icon>
+        </v-btn>
+        <v-progress-circular v-if="showLoader"
+                             indeterminate
+                             color="primary"></v-progress-circular>
 
         <template>
           <v-data-table
@@ -92,8 +99,8 @@
             sortable: false,
             value: 'param1'
           },
-          { text: 'Header 2', value: 'param2' },
-          { text: 'Header 3', value: 'param3' }
+          {text: 'Header 2', value: 'param2'},
+          {text: 'Header 3', value: 'param3'}
         ],
         tableData: [
           {param1: 1, param2: "1", param3: {value1: 1, value2: 2, value3: 3}},
@@ -103,7 +110,8 @@
           {param1: 5, param2: "5", param3: {value1: 1, value2: 2, value3: 3}},
           {param1: 6, param2: "6", param3: {value1: 1, value2: 2, value3: 3}},
           {param1: 7, param2: "7", param3: {value1: 1, value2: 2, value3: 3}},
-        ]
+        ],
+        showLoader: false
       }
     },
     components: {
@@ -127,6 +135,9 @@
             + (Math.floor(Math.random() * 256)) + ','
             + (Math.floor(Math.random() * 256)) + ','
             + (Math.floor(Math.random() * 256)) + ')'
+      },
+      showAlert() {
+        alert("Pressed v-btn component")
       }
     }
   }
