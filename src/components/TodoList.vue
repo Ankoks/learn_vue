@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    props: ['todos'],
+    props: ['todos', 'counter'],
     methods: {
       deleteTodo(index) {
         this.$emit('delete-todo', index)
@@ -18,7 +18,3 @@
     }
   }
 </script>
-
-<style scoped>
-
-</style>
