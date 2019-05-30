@@ -1,11 +1,9 @@
 <template>
   <a-app>
     <MyDrawer/>
-    <div class="col-sm-8">
-      <v-container class="about">
-        <h1>This is an about page</h1>
-      </v-container>
-    </div>
+    <v-container class="about">
+      <h1>This is an about page</h1>
+    </v-container>
   </a-app>
 </template>
 
