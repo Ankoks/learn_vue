@@ -2,16 +2,26 @@
   <v-app>
     <div class="box">
       <h1>Login page</h1>
-      <input type="text" placeholder="Username">
+      <input type="text" placeholder="Username" v-model="username">
       <input type="password" placeholder="Password">
-      <input type="submit" value="Login">
+      <button type="submit" v-on:click.stop.prevent="submit" class="sbm">Submit</button>
     </div>
   </v-app>
 </template>
 
 <script>
   export default {
-    name: "LoginPage"
+    name: "LoginPage",
+    data() {
+      return {
+        username: '123'
+      }
+    },
+    methods: {
+      submit() {
+        this.$router.push({ name: 'actions', params: {name: this.username}, query: {name: 'bbbb'}});
+      }
+    }
   }
 </script>
 
@@ -59,7 +69,7 @@
     border-color: #2ecc71;
   }
 
-  .box input[type="submit"] {
+  .sbm {
     background: none;
     display: block;
     margin: 20px auto;
@@ -74,7 +84,7 @@
     cursor: pointer;
   }
 
-  .box input[type="submit"]:hover {
+  .sbm:hover {
     background: #2ecc71;
   }
 </style>
