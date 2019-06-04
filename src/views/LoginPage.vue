@@ -14,7 +14,7 @@
     name: "LoginPage",
     data() {
       return {
-        username: '123'
+        username: ''
       }
     },
     methods: {

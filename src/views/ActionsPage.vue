@@ -9,7 +9,6 @@
     name: "ActionsPage",
     data() {
       return {
-        userName: '123',
         // usr2: this.$router.currentRoute.query['name']
       }
     },
