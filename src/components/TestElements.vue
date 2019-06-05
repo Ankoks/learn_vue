@@ -149,7 +149,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   .v-snack__wrapper {
     max-width: 100% !important;
     width: 100% !important;
