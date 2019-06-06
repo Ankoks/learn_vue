@@ -16,5 +16,6 @@ export default new Router({
     {path: '/elements', name: 'elements', component: Elements},
     {path: '/login', name: 'login', component: LoginPage},
     {path: '/actions', name: 'actions', component: ActionsPage}
-  ]
+  ],
+  mode: 'history'
 })
