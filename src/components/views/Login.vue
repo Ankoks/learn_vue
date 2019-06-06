@@ -1,9 +1,10 @@
 <template>
   <div class="box">
     <h1>Login page</h1>
-    <input type="text" placeholder="Username" v-model="username">
-    <input type="password" placeholder="Password">
+    <input type="text" placeholder="Username" v-model="username" v-on:focus="clearError">
+    <input type="password" placeholder="Password" v-model="password">
     <button type="submit" v-on:click.stop.prevent="submit" class="sbm">Submit</button>
+    <span style="color: red" v-if="!errorMessage.empty">{{ errorMessage }}</span>
   </div>
 </template>
 
@@ -12,12 +13,23 @@
     name: "LoginPage",
     data() {
       return {
-        username: ''
+        username: '',
+        password: '',
+        errorMessage: ''
       }
     },
     methods: {
       submit() {
-        this.$router.push({name: 'actions', params: {name: this.username}, query: {name: 'bbbb'}});
+        if (this.username !== 'ankoks' && this.password !== 'ankoks') {
+          this.errorMessage = 'Wrong username or password'
+        } else {
+          this.$router.push({name: 'actions', params: {name: this.username}, query: {name: 'bbbb'}});
+        }
+      },
+      clearError() {
+        this.errorMessage = ''
+        this.username = ''
+        this.password = ''
       }
     }
   }
