@@ -1,7 +1,7 @@
 <template>
-  <v-container>
+  <div>
     <v-btn v-on:click="debug">BTN</v-btn>
-  </v-container>
+  </div>
 </template>
 
 <script>

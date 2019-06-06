@@ -1,10 +1,10 @@
 <template>
-  <v-app>
+  <div>
     <v-snackbar color="cyan darken-2"
                 v-model="snackbar"
+                :auto-height="true"
                 :right="true"
                 :top="true"
-                :multi-line="true"
                 :timeout=0>
       {{ snackBarMessage }}
       <v-btn flat
@@ -26,7 +26,7 @@
       <v-btn @click="getInfo">Get</v-btn>
       <span>{{ backEndInfo }}</span>
     </div>
-  </v-app>
+  </div>
 </template>
 
 <script>

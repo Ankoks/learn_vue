@@ -1,19 +1,22 @@
 <template>
   <v-app>
-    <MyToolbar/>
-<!--    <MyDrawer/>-->
+    <AppHeader/>
+    <v-content>
+      <router-view/>
+    </v-content>
+    <AppFooter/>
   </v-app>
 </template>
 
 <script>
-  import MyToolbar from './components/common/MyToolbar'
-  // import MyDrawer from './components/common/MyDrawer'
+  import AppHeader from './components/common/AppHeader'
+  import AppFooter from './components/common/AppFooter'
 
   export default {
     name: "App",
     components: {
-      MyToolbar,
-      // MyDrawer
+      AppHeader,
+      AppFooter
     }
   }
 </script>

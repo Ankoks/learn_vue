@@ -1,12 +1,10 @@
 <template>
-  <v-app>
-    <div class="box">
-      <h1>Login page</h1>
-      <input type="text" placeholder="Username" v-model="username">
-      <input type="password" placeholder="Password">
-      <button type="submit" v-on:click.stop.prevent="submit" class="sbm">Submit</button>
-    </div>
-  </v-app>
+  <div class="box">
+    <h1>Login page</h1>
+    <input type="text" placeholder="Username" v-model="username">
+    <input type="password" placeholder="Password">
+    <button type="submit" v-on:click.stop.prevent="submit" class="sbm">Submit</button>
+  </div>
 </template>
 
 <script>
@@ -19,7 +17,7 @@
     },
     methods: {
       submit() {
-        this.$router.push({ name: 'actions', params: {name: this.username}, query: {name: 'bbbb'}});
+        this.$router.push({name: 'actions', params: {name: this.username}, query: {name: 'bbbb'}});
       }
     }
   }
