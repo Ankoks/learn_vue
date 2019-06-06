@@ -1,5 +1,5 @@
-import Vue from 'vue/types'
-import Router from 'vue-router/types'
+import Vue from 'vue'
+import Router from 'vue-router'
 import Home from '../components/views/Home.vue'
 import Elements from "../components/views/Elements";
 import Menu from "../components/views/Menu";
