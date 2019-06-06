@@ -43,17 +43,23 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn to="/login" flat>
+          <v-icon small>launch</v-icon>
           <!-- only for example (router links may be in v-btn) -->
           <router-link to="/login">Login</router-link>
         </v-btn>
-        <v-btn to="/menu" flat>Menu</v-btn>
-        <v-btn to="/" flat>Home (Vuetify)</v-btn>
-        <v-btn to="/elements" flat>Start testing Vue elements</v-btn>
-        <v-btn to="/about" flat>About</v-btn>
+        <v-btn to="/menu" flat>
+          <v-icon>toc</v-icon>Menu</v-btn>
+        <v-btn to="/" flat>
+          <v-icon small>location_city</v-icon>Home (Vuetify)</v-btn>
+        <v-btn to="/elements" flat>
+          <v-icon small>camera</v-icon>Start testing Vue elements</v-btn>
+        <v-btn to="/about" flat>
+          <v-icon small>help</v-icon>About</v-btn>
       </v-toolbar-items>
       <v-btn flat
              href="https://www.google.ru/?hl=ru"
              target="_blank">
+        <v-icon small>public</v-icon>
         <span class="mr-2">Google</span>
       </v-btn>
     </v-toolbar>
