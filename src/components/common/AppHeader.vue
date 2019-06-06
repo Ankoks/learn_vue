@@ -2,33 +2,33 @@
   <div>
     <v-navigation-drawer absolute temporary v-model="drawer" class="hidden-md-and-up">
       <v-list>
-        <v-list-tile>
+        <v-list-tile @click="routeToLogin">
           <v-list-tile-action>
-            <v-icon>android</v-icon>
+            <v-icon small>launch</v-icon>
           </v-list-tile-action>
           <v-list-tile-title>Login</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile @click="routeToMenu">
           <v-list-tile-action>
-            <v-icon>android</v-icon>
+            <v-icon>toc</v-icon>
           </v-list-tile-action>
           <v-list-tile-title>Menu</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile @click="routeToHome">
           <v-list-tile-action>
-            <v-icon>android</v-icon>
+            <v-icon small>location_city</v-icon>
           </v-list-tile-action>
           <v-list-tile-title>Home (Vuetify)</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile @click="routeToElements">
           <v-list-tile-action>
-            <v-icon>android</v-icon>
+            <v-icon small>camera</v-icon>
           </v-list-tile-action>
           <v-list-tile-title>Start testing Vue elements</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile>
+        <v-list-tile @click="routeToAbout">
           <v-list-tile-action>
-            <v-icon>android</v-icon>
+            <v-icon small>help</v-icon>
           </v-list-tile-action>
           <v-list-tile-title>About</v-list-tile-title>
         </v-list-tile>
@@ -73,6 +73,23 @@
       return {
         drawer: false
       }
+    },
+    methods: {
+      routeToLogin() {
+        this.$router.push({name: 'login'});
+      },
+      routeToMenu() {
+        this.$router.push({name: 'menu'});
+      },
+      routeToHome() {
+        this.$router.push({name: 'home'});
+      },
+      routeToElements() {
+        this.$router.push({name: 'elements'});
+      },
+      routeToAbout() {
+        this.$router.push({name: 'about'});
+      },
     }
   }
 </script>
