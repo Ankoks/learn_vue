@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Elements from "./views/Elements";
 import Menu from "./views/Menu";
-import LoginPage from "./views/LoginPage";
-import ActionsPage from "./views/ActionsPage";
+import LoginPage from "./views/Login";
+import ActionsPage from "./views/Actions";
 
 Vue.use(Router)
 
