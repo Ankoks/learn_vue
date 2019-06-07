@@ -1,8 +1,12 @@
 <template>
   <div class="box">
     <h1>Login page</h1>
-    <input type="text" placeholder="Username" v-model="username" v-on:focus="clearError">
-    <input type="password" placeholder="Password" v-model="password">
+    <label>
+      <input type="text" placeholder="Username" v-model="username" v-on:focus="clearError">
+    </label>
+    <label>
+      <input type="password" placeholder="Password" v-model="password" v-on:keydown.enter="submit">
+    </label>
     <button type="submit" v-on:click.stop.prevent="submit" class="sbm">Submit</button>
     <span style="color: red" v-if="!errorMessage.empty">{{ errorMessage }}</span>
   </div>

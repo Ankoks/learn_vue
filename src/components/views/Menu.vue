@@ -1,12 +1,18 @@
 <template>
   <div>
     <v-btn v-on:click="debug">BTN</v-btn>
+    <Profile/>
   </div>
 </template>
 
 <script>
+  import Profile from './Profile'
+
   export default {
     name: "Menu",
+    components: {
+      Profile
+    },
     data() {
       return {
         items: [
