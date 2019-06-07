@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background: black; height: 100%">
     <v-btn v-on:click="debug">BTN</v-btn>
     <Profile/>
   </div>

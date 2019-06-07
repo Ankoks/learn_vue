@@ -8,11 +8,11 @@
           </v-list-tile-action>
           <v-list-tile-title>Login</v-list-tile-title>
         </v-list-tile>
-        <v-list-tile @click="routeToMenu">
+        <v-list-tile @click="routeToProfile">
           <v-list-tile-action>
-            <v-icon>toc</v-icon>
+            <v-icon>account_circle</v-icon>
           </v-list-tile-action>
-          <v-list-tile-title>Menu</v-list-tile-title>
+          <v-list-tile-title>Profile</v-list-tile-title>
         </v-list-tile>
         <v-list-tile @click="routeToHome">
           <v-list-tile-action>
@@ -47,8 +47,8 @@
           <!-- only for example (router links may be in v-btn) -->
           <router-link to="/login">Login</router-link>
         </v-btn>
-        <v-btn to="/menu" flat>
-          <v-icon>toc</v-icon>Menu</v-btn>
+        <v-btn to="/profile" flat>
+          <v-icon small>account_circle</v-icon>Profile</v-btn>
         <v-btn to="/" flat>
           <v-icon small>location_city</v-icon>Home (Vuetify)</v-btn>
         <v-btn to="/elements" flat>
@@ -78,8 +78,8 @@
       routeToLogin() {
         this.$router.push({name: 'login'});
       },
-      routeToMenu() {
-        this.$router.push({name: 'menu'});
+      routeToProfile() {
+        this.$router.push({name: 'profile'});
       },
       routeToHome() {
         this.$router.push({name: 'home'});
