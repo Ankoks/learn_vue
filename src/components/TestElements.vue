@@ -48,7 +48,7 @@
         </template>
       </v-data-table>
     </template>
-    <v-snackbar color="cyan darken-2"
+    <v-snackbar color="blue"
                 v-model="snackbar"
                 :right="true"
                 :top="true"

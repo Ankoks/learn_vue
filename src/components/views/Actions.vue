@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-snackbar color="cyan darken-2"
+    <v-snackbar color="blue"
                 v-model="snackbar"
                 :auto-height="true"
                 :right="true"
