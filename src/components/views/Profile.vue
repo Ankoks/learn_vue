@@ -31,37 +31,6 @@
           <div class="grey--text font-weight-light">Video game</div>
         </div>
         <v-spacer></v-spacer>
-        <v-dialog width="400">
-          <template>
-            <v-icon>mdi-share-variant</v-icon>
-          </template>
-          <v-card>
-            <v-card-title>
-              <span class="title font-weight-bold">Share</span>
-              <v-spacer></v-spacer>
-            </v-card-title>
-            <v-list>
-              <v-list-tile>
-                <v-list-tile-action>
-                  <v-icon color="indigo">mdi-facebook-box</v-icon>
-                </v-list-tile-action>
-                <v-card-title>Facebook</v-card-title>
-              </v-list-tile>
-              <v-list-tile>
-                <v-list-tile-action>
-                  <v-icon color="cyan">mdi-twitter-box</v-icon>
-                </v-list-tile-action>
-                <v-card-title>Twitter</v-card-title>
-              </v-list-tile>
-              <v-list-tile>
-                <v-list-tile-action>
-                  <v-icon>mdi-email</v-icon>
-                </v-list-tile-action>
-                <v-card-title>Email</v-card-title>
-              </v-list-tile>
-            </v-list>
-          </v-card>
-        </v-dialog>
       </v-card-title>
       <v-divider></v-divider>
       <v-card-actions>
