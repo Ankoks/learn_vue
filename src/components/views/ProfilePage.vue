@@ -23,7 +23,7 @@
       }
     },
     methods: {
-      debug (event) {
+      debug(event) {
         // eslint-disable-next-line
         console.log(event)
       }
