@@ -40,7 +40,7 @@
       </v-card-actions>
       <div class="pa-3 pt-0 caption">
         <em>Skills: Java, Spring Framework, SQL, JSP, Apache Maven, Apache Tomcat,
-          Liquibase, FlyWay, Oracle Database, PostgreSQL, jOOQ, Hibernate, jQuery</em>
+          Liquibase, FlyWay, Oracle Database, PostgreSQL, jOOQ, Hibernate</em>
       </div>
     </v-card>
   </div>
