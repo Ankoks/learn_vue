@@ -1,5 +1,8 @@
 # vue
 
+## See the result on GitHub Pages by link
+https://ankoks.github.io/learn_vue/
+
 ## Project setup
 ```
 npm install
@@ -19,11 +22,3 @@ npm run build
 ```
 npm run test
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
