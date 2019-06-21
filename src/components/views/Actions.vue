@@ -26,6 +26,11 @@
       <v-btn @click="getInfo">Get</v-btn>
       <span>{{ backEndInfo }}</span>
     </div>
+
+    <div>
+      <v-btn @click="getQRCode">Show PNG QR code</v-btn>
+    </div>
+    <img :src="image"/>
   </div>
 </template>
 
@@ -38,6 +43,7 @@
     data() {
       return {
         info: null,
+        image: '',
         loading: true,
         backEndInfo: null,
         inputValue: '',
@@ -51,14 +57,14 @@
         this.loading = true;
         this.snackbar = false;
         console.log(this.inputValue);
-        const arithmeticURL = 'http://localhost:8090/arithmetic/'
+        const arithmeticURL = 'http://localhost:8090/arithmetic/';
         axios
             .get(arithmeticURL + this.inputValue)
             .then(response => {
               if (!isNaN(response.data)) {
                 this.backEndInfo = response.data
               } else {
-                this.backEndInfo = ''
+                this.backEndInfo = '';
                 this.snackbar = true;
                 // this.snackBarMessage = response.data.backEndMessage
                 this.snackBarMessage = response.data.frontEndMessage
@@ -67,7 +73,26 @@
             .catch(error => {
               // console.log(error);
               this.snackbar = true;
-              this.snackBarMessage = error
+              this.snackBarMessage = error;
+            })
+            .finally(() => (this.loading = false))
+      },
+      getQRCode() {
+        this.loading = true;
+        this.snackbar = false;
+        const qrURL = 'http://localhost:8080/profile/qr/1302';
+        axios.get(qrURL,
+            {responseType: 'arraybuffer'})
+            .then(response => {
+              let blob = new Blob(
+                  [response.data],
+                  {type: response.headers['content-type']}
+              );
+              this.image = URL.createObjectURL(blob)
+            })
+            .catch(error => {
+              this.snackbar = true;
+              this.snackBarMessage = error;
             })
             .finally(() => (this.loading = false))
       }
