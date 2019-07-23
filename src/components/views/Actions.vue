@@ -57,7 +57,7 @@
         this.loading = true;
         this.snackbar = false;
         console.log(this.inputValue);
-        const arithmeticURL = 'http://localhost:8090/arithmetic/';
+        const arithmeticURL = '/arithmetic/';
         axios
             .get(arithmeticURL + this.inputValue)
             .then(response => {
